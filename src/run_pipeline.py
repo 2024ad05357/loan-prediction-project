@@ -1,3 +1,5 @@
+import os
+
 from ingestion import load_data
 from preprocessing import (
     check_missing_values,
@@ -12,6 +14,14 @@ from eda import (
 )
 
 print("Starting Data Pipeline")
+
+print("=" * 50)
+print("Create Reports Directory")
+os.makedirs(
+    "reports",
+    exist_ok=True
+)
+print("Reports Directory Created Successfully")
 
 df = load_data("data/raw/loan_prediction_dataset.csv")
 

@@ -1,5 +1,6 @@
 # src/eda.py
 
+import os
 from narwhals import corr
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,6 +14,8 @@ def summary_statistics(df):
 
     return df.describe()
 
+import os
+
 def correlation_analysis(df):
 
     corr = df.corr()
@@ -25,9 +28,19 @@ def correlation_analysis(df):
         cmap="coolwarm"
     )
 
-    plt.title("Correlation Matrix")
+    plt.title(
+        "Correlation Matrix"
+    )
 
-    plt.savefig("reports/correlation_heatmap.png")
+    os.makedirs(
+        "reports",
+        exist_ok=True
+    )
+
+    plt.savefig(
+        "reports/correlation_heatmap.png"
+    )
+
     plt.close()
 
     return corr
