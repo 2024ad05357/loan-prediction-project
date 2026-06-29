@@ -3,8 +3,7 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-#jupyter
-#prefect
-#mlflow
-#fastapi
-#uvicorn
+mlflow
+dagshub
+fastapi
+uvicorn
