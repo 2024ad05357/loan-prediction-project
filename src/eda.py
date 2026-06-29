@@ -33,12 +33,12 @@ def correlation_analysis(df):
     )
 
     os.makedirs(
-        "reports",
+        "../reports",
         exist_ok=True
     )
 
     plt.savefig(
-        "reports/correlation_heatmap.png"
+        "../reports/correlation_heatmap.png"
     )
 
     plt.close()
