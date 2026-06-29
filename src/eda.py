@@ -1,5 +1,6 @@
 # src/eda.py
 
+from narwhals import corr
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -26,7 +27,8 @@ def correlation_analysis(df):
 
     plt.title("Correlation Matrix")
 
-    plt.show()
+    plt.savefig("reports/correlation_heatmap.png")
+    plt.close()
 
     return corr
 
